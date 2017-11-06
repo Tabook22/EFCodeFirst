@@ -8,6 +8,7 @@ namespace EFCodeFirst.Models
 {
     public class BlogContext:DbContext
     {
+
         //Notice:DbContext is a class responsible for communicating with a database
         //here we calling the base class using the keyword :base and then passing
         //connection string to the base class
