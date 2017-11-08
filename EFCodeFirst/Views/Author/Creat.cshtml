@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Creat";
+}
+
+<h2>Creat</h2>
+
+<form name="frmAuthor" action="@Url.Action("creat", "Author")" method="post" onsubmit="return (validateForm());">
+    <input type="text" name="Name" />
+    <input type="submit" value="Add New" />
+</form>
+
+<script type="text/javascript">
+    function validateForm() {
+        var a = document.forms["frmAuthor"]["Name"].value;
+        if (a == null || a=="")
+        {
+            alert("Please Fill All Required Field");
+            return false;
+        }
+    }
+</script>

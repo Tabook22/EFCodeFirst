@@ -14,8 +14,21 @@ namespace EFCodeFirst.Controllers
         // GET: Post
         public ActionResult Index()
         {
-            List<Post> lstPs = db.Posts.ToList();
+            List<Post> lstPs = db.PostsTable.ToList();
             return View(lstPs);
         }
+
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+       [HttpPost]
+        public ActionResult Create(Post pst)
+        {
+            return View();
+        }
+
     }
 }

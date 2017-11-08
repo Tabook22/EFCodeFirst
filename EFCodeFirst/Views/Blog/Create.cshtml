@@ -1,0 +1,35 @@
+﻿@model  ICollection<EFCodeFirst.Models.Blog>
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form action="@Url.Action("Create", "Blog")" method="post">
+    <input type="text" name="Name" />
+    <input type="submit" value="Add New" />
+</form>
+
+<div style="background-color:#ccc; margin-top:20px;">
+   <table>
+       @foreach (var itm in Model)
+   {
+       <tr>
+           <td>@itm.Name</td><td>
+           <a href="@Url.Action("delBlog", "Blog", new { id = itm.BlogId })">
+           Delete
+           </a>
+           </td>
+
+           <td>
+               <a href="@Url.Action("Edit", "Blog", new { BlogId = itm.BlogId })">
+                   Edit Blog
+               </a>
+               </td>
+       </tr>
+   }
+   </table>
+   
+     
+</div>
+

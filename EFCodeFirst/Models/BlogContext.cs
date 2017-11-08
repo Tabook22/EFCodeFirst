@@ -22,5 +22,6 @@ namespace EFCodeFirst.Models
         //here we have two DbSet the first one is of type Blog and we called it BlogsTable
         public DbSet<Blog> BlogsTable { get; set; }
         public DbSet<Post> PostsTable { get; set; }
+        public DbSet<Author> AuthorTable { get; set; }
     }
 }
