@@ -1,0 +1,24 @@
+﻿@model EFCodeFirst.Models.viewModelCom
+@{
+    ViewBag.Title = "commentsPost";
+}
+
+<h2>commentsPost</h2>
+
+<p>
+    @Model.Title
+</p>
+
+<p>
+    التعليقات
+</p>
+<div>
+    <form action="@Url.Action("addNewCom", "post")" method="post">
+        @Html.HiddenFor(model => model.PostId)
+        <input type="text" name="cTitle" />
+        <input type="text" name="comments" />
+       
+        <input type="submit" value="Add New" />
+    </form>
+
+</div>

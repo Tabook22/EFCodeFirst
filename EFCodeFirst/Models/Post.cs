@@ -22,6 +22,8 @@ namespace EFCodeFirst.Models
         //so blog will be aslo a tble, which will have a forign key of table Blog
         public virtual Blog blog { get; set; }
         public virtual Author author { get; set; }
+
+        public virtual List<Comment> comment { get; set; }
     
     }
 }

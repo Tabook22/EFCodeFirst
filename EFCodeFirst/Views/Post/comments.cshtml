@@ -1,0 +1,17 @@
+﻿@model  IEnumerable<EFCodeFirst.Models.Post>
+@{
+    ViewBag.Title = "comments";
+}
+
+<h2>comments</h2>
+
+<table>
+    @foreach (var nasser in Model)
+    {
+        <tr>
+            <td>@nasser.Title</td>
+            <td><a href="@Url.Action("commentsPost","Post", new { id = nasser.PostId })">التفاصيل</a></td>
+        </tr>
+    }
+    
+</table>

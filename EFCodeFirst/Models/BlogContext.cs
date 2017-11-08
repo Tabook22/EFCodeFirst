@@ -23,5 +23,6 @@ namespace EFCodeFirst.Models
         public DbSet<Blog> BlogsTable { get; set; }
         public DbSet<Post> PostsTable { get; set; }
         public DbSet<Author> AuthorTable { get; set; }
+        public DbSet<Comment> CommentTable { get; set; }
     }
 }
