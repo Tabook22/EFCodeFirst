@@ -41,6 +41,14 @@ namespace EFCodeFirst.Controllers
         public ActionResult commentsPost(int id)
         {
             Post ps = db.PostsTable.Find(id);
+            // List<Comment> lsCm = db.CommentTable.Where(x => x.PostId == id).ToList();
+           
+            List<Comment> lstC = (from x in db.CommentTable
+                        where x.PostId == id
+                        select x).ToList();
+
+            
+
             viewModelCom vm = new viewModelCom();
             vm.PostId = ps.PostId;
             vm.Title = ps.Title;
